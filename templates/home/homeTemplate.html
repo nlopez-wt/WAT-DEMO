@@ -1,0 +1,9 @@
+<strong>Filter Source By:&nbsp;</strong><span>
+<select id="ddpFilter" >
+	<option value="all">All</option>
+	<% _.each(sources, function(source) { %>
+	<option value="<%= source %>"><%= source.capitalize() %></option>
+	<% }); %>
+</select>
+<div id="posts-list">
+</div></span>

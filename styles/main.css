@@ -1,0 +1,17 @@
+#index .container {
+	margin-top: 50px;
+}
+
+#posts-list {
+	padding-top:20px;
+}
+
+#posts-list hr {
+margin-bottom: 10px;
+margin-top: 0px;
+}
+
+#posts-list .btn-link{
+	color: #000;
+	text-decoration: none;
+}

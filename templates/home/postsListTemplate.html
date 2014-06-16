@@ -1,0 +1,25 @@
+<div class="row">
+	<div class="col-sm-2 hidden-xs" ><strong><p style="font-size:25px">Source</p></strong></div>
+	<div class="col-sm-6 hidden-xs" ><strong><p style="font-size:25px">Title</p></strong></div>
+</div>
+<hr/>
+<% _.each(posts, function(post) { %>
+<div class="row">
+	<div class="col-sm-2 col-md-1 text-center hidden-xs" ><%= post.source.capitalize() %></div>
+	<div class="col-sm-2 col-md-1 visible-xs" ><%= post.source %></div>
+	<div class="col-sm-7 col-md-offset-1" ><a href="<%= post.link %>" target="_blank"><%= post.title %></a></div>
+	<div class="visible-xs" Style="padding-top:5px"></div>
+	<div id="star-<%= post.id %>" class="col-sm-1 pull-right star" >
+		<% if (post.like) { %>
+		<button class="glyphicon glyphicon-star btn btn btn-link" value="<%= post.id %>" style="font-size:28px"></button>
+		<% } else { %>
+		<button class="glyphicon glyphicon-star-empty btn btn btn-link" value="<%= post.id %>" style="font-size:28px"></button>
+		<% } %>
+	</div>
+	<div class="col-sm-2 pull-right" ><a href='#/post/<%= post.id %>' class='btn btn-default'>Show Details</a></div>
+</div>
+<div class="details row">
+	<div class="details col-md-6 col-md-offset-2"><p><p></div>
+</div>
+<hr/>
+<% }); %>
